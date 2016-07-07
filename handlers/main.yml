@@ -5,4 +5,4 @@
     state: restarted
 
 - name: reload pureftpd-users
-  shell: pure-pw mkdb
+  command: pure-pw mkdb

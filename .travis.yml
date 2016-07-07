@@ -50,7 +50,7 @@ script:
   # ansible-lint checks for best practice
   - ansible-lint --nocolor tests/$SITE
 
-  # Check if monit is reachable
+  # Check if FTP is working
   - tests/ftp-test.sh
 
 after_failure:

@@ -3,7 +3,7 @@
   apt:
     pkg: '{{ item }}'
     state: present
-  with_items: pureftpd_apt_packages
+  with_items: '{{ pureftpd_apt_packages }}'
 
 - name: Ensure pureftpd_group exists
   register: _pureftpd_group
@@ -32,7 +32,7 @@
 
 
 - name: 'Get all config variables from file system'
-  shell: ls -1 /etc/pure-ftpd/conf
+  command: ls -1 /etc/pure-ftpd/conf
   register: contents
   changed_when: false
 
@@ -42,7 +42,7 @@
     path: '/etc/pure-ftpd/conf/{{ item }}'
     state: absent
   when: "pureftpd_config[item] is not defined"
-  with_items: contents.stdout_lines
+  with_items: '{{ contents.stdout_lines }}'
 
 - name: 'Write config files'
   notify: restart pureftpd
@@ -53,7 +53,7 @@
     group: root
     mode: 0750
   when: item.key != '' and item.value|lower != 'no'
-  with_dict: pureftpd_config
+  with_dict: '{{ pureftpd_config }}'
 
 - name: write users to file
   notify: reload pureftpd-users
