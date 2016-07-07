@@ -1,6 +1,6 @@
 # Ansible Role: Pure-FTPd
 
-[![Build Status](https://travis-ci.org/tschifftner/ansible-role-pureftpd.svg)](https://travis-ci.org/tschifftner/ansible-role-pureftpd)
+[![Build Status](https://travis-ci.org/picturemaxx/ansible-pureftpd.svg?branch=master)](https://travis-ci.org/picturemaxx/ansible-pureftpd)
 
 Installs Pure-FTPd on Debian/Ubuntu linux servers.
 
@@ -107,7 +107,7 @@ None.
 
     - hosts: server
       roles:
-        - { role: tschifftner.pureftpd }
+        - { role: ansible-pureftpd }
 
 ## License
 
@@ -116,3 +116,4 @@ MIT / BSD
 ## Author Information
 
  - Tobias Schifftner, @tschifftner
+ - Michael Weinrich, @micxer

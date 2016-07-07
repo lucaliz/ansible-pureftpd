@@ -9,4 +9,4 @@
         home: '/home/joe'
 
   roles:
-    - ansible-role-pureftpd
+    - ansible-pureftpd
