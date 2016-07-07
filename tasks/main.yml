@@ -52,7 +52,7 @@
     owner: root
     group: root
     mode: 0750
-  when: item.key != ''
+  when: item.key != '' and item.value|lower != 'no'
   with_dict: pureftpd_config
 
 - name: write users to file
