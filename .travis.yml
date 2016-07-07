@@ -27,8 +27,11 @@ install:
   # Install ansible-lint
   - pip install ansible-lint
 
+  # Check ansible-lint version
+  - ansible-lint --version
+
   # Create ansible.cfg with correct roles_path
-  - printf '[defaults]\nroles_path=../' >ansible.cfg
+  - printf '[defaults]\nroles_path=../' > ansible.cfg
 
 script:
   # Check the role/playbook's syntax.
@@ -48,7 +51,7 @@ script:
   - ansible-lint tests/$SITE
 
   # Check if monit is reachable
-  - test/ftp-test.sh
+  - tests/ftp-test.sh
 
 after_failure:
 
