@@ -3,7 +3,7 @@ FTPLOG=/tmp/ftplogfile
 ftp -inv <<! > $FTPLOG
 open localhost
 user joe test
-put inventory
+put tests/inventory inventory
 close
 quit
 !
