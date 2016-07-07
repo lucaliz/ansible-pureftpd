@@ -48,7 +48,7 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
 
   # ansible-lint checks for best practice
-  - ansible-lint tests/$SITE
+  - ansible-lint --nocolor tests/$SITE
 
   # Check if monit is reachable
   - tests/ftp-test.sh
