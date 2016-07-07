@@ -24,6 +24,9 @@ install:
   # Check ansible version
   - ansible --version
 
+  # Install ansible-lint
+  - pip install ansible-lint
+
   # Create ansible.cfg with correct roles_path
   - printf '[defaults]\nroles_path=../' >ansible.cfg
 
@@ -50,5 +53,3 @@ script:
 after_failure:
 
 notifications:
-  slack: ambimax:2MlPTX9bY9aPxCPhJGxHKIT6
-  webhooks: https://galaxy.ansible.com/api/v1/notifications/
