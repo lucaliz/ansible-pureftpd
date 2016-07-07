@@ -30,8 +30,8 @@ pureftpd_config:
 #  PGSQLConfigFile:             /etc/pureftpd-pgsql.conf
   PureDB:                       /etc/pure-ftpd/pureftpd.pdb
 #  ExtAuth:                     /var/run/ftpd.sock
-  PAMAuthentication:           'no'
-#  UnixAuthentication:          'yes'
+  PAMAuthentication:           'yes'
+  UnixAuthentication:          'no'
   LimitRecursion:              '10000 8'
   AnonymousCanCreateDirs:      'no'
 #  MaxLoad:                     '4'
@@ -44,7 +44,7 @@ pureftpd_config:
 #  AnonymousBandwidth:           '8'
 #  UserBandwidth:                '8'
   Umask:                       '117 007'
-#  MinUID:                      '2001'
+  MinUID:                      '1000'
   AllowUserFXP:                'no'
   AllowAnonymousFXP:           'no'
   ProhibitDotFilesWrite:       'no'
@@ -68,7 +68,8 @@ pureftpd_config:
 #  PerUserLimits:               '3:20'
 #  NoTruncate:                  'yes'
   TLS:                         '0'
+  TLSCipherSuite:               'EDH+CAMELLIA:EDH+aRSA:EECDH+aRSA+AESGCM:EECDH+aRSA+SHA256:EECDH:+CAMELLIA128:+AES128:+SSLv3:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!DSS:!RC4:!SEED:!IDEA:!ECDSA:kEDH:CAMELLIA128-SHA:AES128-SHA'
   IPV4Only:                    'yes'
 #  IPV6Only:                    'yes'
-#  FileSystemCharset:           'utf8'
+  FSCharset:                    'UTF-8'
 #  ClientCharset:               'cp1251'
