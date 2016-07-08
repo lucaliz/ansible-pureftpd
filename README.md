@@ -24,78 +24,73 @@ pureftpd_users:
 
 ```
 
-To allow virtual users, one single user will be created:
-```
-pureftpd_user: 'ftpuser'
-pureftpd_group: 'ftp'
-```
-
 ### Config Variables
 
 Values should be surrounded by quotation marks as otherwise yes becomes True
 
 ```
 pureftpd_config:
-  ChrootEveryone:              'yes'
-  BrokenClientsCompatibility:  'no'
-  MaxClientsNumber:            '50'
-  Daemonize:                   'yes'
-  MaxClientsPerIP:             '{{ ansible_processor_cores }}'
-  VerboseLog:                  'yes'
-  DisplayDotFiles:             'yes'
-  AnonymousOnly:               'no'
-  NoAnonymous:                 'yes'
-  SyslogFacility:              'ftp'
-#  FortunesFile:                '/etc/pure-ftpd/cookie'
-  DontResolve:                 'yes'
-  MaxIdleTime:                 '15'
-#  LDAPConfigFile:              /etc/pureftpd-ldap.conf
-#  MySQLConfigFile:             /etc/pure-ftpd/mysql.conf
-#  PGSQLConfigFile:             /etc/pureftpd-pgsql.conf
-  PureDB:                       /etc/pure-ftpd/pureftpd.pdb
-#  ExtAuth:                     /var/run/ftpd.sock
-  PAMAuthentication:           'no'
-#  UnixAuthentication:          'yes'
-  LimitRecursion:              '10000 8'
-  AnonymousCanCreateDirs:      'no'
-#  MaxLoad:                     '4'
-#  PassivePortRange:            '30000 50000'
-#  ForcePassiveIP:              '192.168.0.1'
-#  AnonymousRatio:              '1 10'
-#  UserRatio:                   '1 10'
-  AntiWarez:                   'yes'
-#  Bind:                         '127.0.0.1,21'
-#  AnonymousBandwidth:           '8'
-#  UserBandwidth:                '8'
-  Umask:                       '117 007'
-#  MinUID:                      '2001'
-  AllowUserFXP:                'no'
-  AllowAnonymousFXP:           'no'
-  ProhibitDotFilesWrite:       'no'
-  ProhibitDotFilesRead:        'no'
-  AutoRename:                  'no'
-  AnonymousCantUpload:         'no'
-#  TrustedIP:                   '10.1.1.1'
-#  LogPID:                      'yes'
-  AltLog:                      'clf:/var/log/pureftpd.log'
+#  AllowAnonymousFXP:           'no'
+#  AllowUserFXP:                'no'
+  AltLog:                      'clf:/var/log/pure-ftpd/transfer.log'
 #  AltLog:                      'stats:/var/log/pureftpd.log'
 #  AltLog:                      'w3c:/var/log/pureftpd.log'
-  NoChmod:                     'yes'
-  KeepAllFiles:                'yes'
-  CreateHomeDir:               'yes'
-#  Quota:                       '1000:10'
-#  PIDFile:                     '/var/run/pure-ftpd.pid'
-#  CallUploadScript:           'yes'
-#  MaxDiskUsage:                '99'
-#  NoRename:                    'yes'
-  CustomerProof:               'yes'
-#  PerUserLimits:               '3:20'
-#  NoTruncate:                  'yes'
-  TLS:                         '0'
-  IPV4Only:                    'yes'
+#  AnonymousBandwidth:          '8'
+#  AnonymousCanCreateDirs:      'no'
+#  AnonymousCantUpload:         'no'
+#  AnonymousOnly:               'no'
+#  AnonymousRatio:              '1 10'
+#  AntiWarez:                   'yes'
+#  AutoRename:                  'no'
+#  Bind:                         '127.0.0.1,21'
+#  BrokenClientsCompatibility:  'no'
+#  CallUploadScript:            'yes'
+#  ChrootEveryone:              'yes'
+#  ClientCharset:               'UTF-8'
+#  CreateHomeDir:               'yes'
+#  CustomerProof:               'yes'
+#  Daemonize:                   'yes'
+#  DisplayDotFiles:             'yes'
+#  DontResolve:                 'yes'
+#  ExtAuth:                     /var/run/ftpd.sock
+#  ForcePassiveIP:              '192.168.0.1'
+#  FortunesFile:                '/etc/pure-ftpd/cookie'
+  FSCharset:                   'UTF-8'
+#  IPV4Only:                    'yes'
 #  IPV6Only:                    'yes'
-#  FileSystemCharset:           'utf8'
-#  ClientCharset:               'cp1251'
+#  KeepAllFiles:                'yes'
+#  LDAPConfigFile:              /etc/pureftpd-ldap.conf
+#  LimitRecursion:              '10000 8'
+#  LogPID:                      'yes'
+#  MaxClientsNumber:            '50'
+#  MaxClientsPerIP:             '{{ ansible_processor_cores }}'
+#  MaxDiskUsage:                '99'
+#  MaxIdleTime:                 '15'
+#  MaxLoad:                     '4'
+  MinUID:                      '1000'
+#  MySQLConfigFile:             /etc/pure-ftpd/mysql.conf
+  NoAnonymous:                 'yes'
+#  NoChmod:                     'yes'
+#  NoRename:                    'yes'
+#  NoTruncate:                  'yes'
+  PAMAuthentication:           'yes'
+#  PassivePortRange:            '30000 50000'
+#  PerUserLimits:               '3:20'
+#  PGSQLConfigFile:             /etc/pureftpd-pgsql.conf
+#  PIDFile:                     '/var/run/pure-ftpd.pid'
+#  ProhibitDotFilesRead:        'no'
+#  ProhibitDotFilesWrite:       'no'
+  PureDB:                       /etc/pure-ftpd/pureftpd.pdb
+#  Quota:                       '1000:10'
+#  SyslogFacility:              'ftp'
+#  TLS:                         '0'
+  TLSCipherSuite:              'ALL:!aNULL:!SSLv3'
+#  TrustedIP:                   '10.1.1.1'
+#  Umask:                       '117 007'
+  UnixAuthentication:          'no'
+#  UserBandwidth:                '8'
+#  UserRatio:                   '1 10'
+#  VerboseLog:                  'yes'
 ```
 
 

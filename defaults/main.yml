@@ -27,7 +27,7 @@ pureftpd_config:
 #  BrokenClientsCompatibility:  'no'
 #  CallUploadScript:            'yes'
 #  ChrootEveryone:              'yes'
-#  ClientCharset:               'cp1251'
+#  ClientCharset:               'UTF-8'
 #  CreateHomeDir:               'yes'
 #  CustomerProof:               'yes'
 #  Daemonize:                   'yes'
