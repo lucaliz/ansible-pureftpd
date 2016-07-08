@@ -29,6 +29,21 @@
   when: item.key != ''
   with_dict: '{{ pureftpd_config }}'
 
+- name: Check for TLS certificate file
+  stat:
+    path: /etc/ssl/private/pure-ftpd.pem
+  when: "pureftpd_config.TLS and pureftpd_config.TLS > 0"
+  register: _pureftpd_tls_certificate
+  tags: test
+
+- name: Fail when no certificate is found
+  fail:
+    msg: |
+        You have to copy a certificate to /etc/ssl/private/pure-ftpd.pem
+        when you enable TLS!
+  when: "not _pureftpd_tls_certificate.stat.exists"
+  tags: test
+
 - name: write users to file
   notify: reload pureftpd-users
   template:
