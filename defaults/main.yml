@@ -1,6 +1,5 @@
 ---
 pureftpd_apt_packages:
-  - pure-ftpd-common
   - pure-ftpd
 
 pureftpd_users: []
