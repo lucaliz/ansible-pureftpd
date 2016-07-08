@@ -7,6 +7,8 @@
       - name: joe
         password: '$1$cZIFAH90$256idgiw.eo9RNieuXUr20' # test
         home: '/home/joe'
+        uid: 1000
+        gid: 1000
 
   roles:
     - ansible-pureftpd
