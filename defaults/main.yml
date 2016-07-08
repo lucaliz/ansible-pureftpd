@@ -1,5 +1,8 @@
 ---
-# Define ftp users
+pureftpd_apt_packages:
+  - pure-ftpd-common
+  - pure-ftpd
+
 pureftpd_users: []
 #  - name: ftpuser
 #    password: '$2....40'
