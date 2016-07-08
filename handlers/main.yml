@@ -6,3 +6,5 @@
 
 - name: reload pureftpd-users
   command: pure-pw mkdb
+  when: pureftpd_users|length
+
