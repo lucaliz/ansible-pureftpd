@@ -1,0 +1,18 @@
+# meta file for ansible-pureftpd
+---
+dependencies: []
+
+galaxy_info:
+  author: Michael Weinrich
+  company: picturemaxx AG
+  description: Install pure-ftpd on Debian/Ubuntu servers
+  license: MIT
+  min_ansible_version: 1.9
+  platforms:
+    - name: Debian
+      versions:
+        - jessie
+    - name: Ubuntu
+      versions:
+        - precise
+        - trusty
