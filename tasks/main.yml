@@ -32,7 +32,7 @@
 - name: write users to file
   notify: reload pureftpd-users
   template:
-    src: 'pureftpd.passwd'
+    src: 'pureftpd.passwd.j2'
     dest: '/etc/pure-ftpd/pureftpd.passwd'
     owner: root
     group: root
