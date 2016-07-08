@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+v1.0.1:
+
+* 634cffc: Re-add meta info to make ansible-galaxy command work again
+
 v1.0.0:
 
 * 0b283a2: init
