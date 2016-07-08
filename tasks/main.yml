@@ -5,15 +5,6 @@
     state: present
   with_items: '{{ pureftpd_apt_packages }}'
 
-- name: Ensure conf directory
-  file:
-    path: '/etc/pure-ftpd'
-    state: directory
-    owner: root
-    group: root
-    mode: '0750'
-
-
 - name: 'Get all config variables from file system'
   command: ls -1 /etc/pure-ftpd/conf
   register: contents
