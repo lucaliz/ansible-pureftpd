@@ -9,9 +9,6 @@ pureftpd_users: []
 #    uid: '1002'
 #    gid: '1002'
 
-pureftpd_user: 'ftpuser'
-pureftpd_group: 'ftp'
-
 # Values should be surrounded by quotation marks as otherwise yes becomes True
 pureftpd_config:
 #  AllowAnonymousFXP:           'no'

@@ -5,23 +5,6 @@
     state: present
   with_items: '{{ pureftpd_apt_packages }}'
 
-- name: Ensure pureftpd_group exists
-  register: _pureftpd_group
-  group:
-    name: '{{ pureftpd_group }}'
-    system: no
-    state: present
-
-- name: Ensure pureftpd_user exists
-  register: _pureftpd_user
-  user:
-    name: '{{ pureftpd_user }}'
-    system: no
-    group: '{{ pureftpd_group }}'
-    home: /dev/null
-    shell: /etc
-    state: present
-
 - name: Ensure conf directory
   file:
     path: '/etc/pure-ftpd'
