@@ -51,7 +51,7 @@ script:
   - ansible-lint --nocolor tests/$SITE
 
   # Check if FTP is working
-  - tests/ftp-test.sh
+  #- tests/ftp-test.sh
 
 after_failure:
 
