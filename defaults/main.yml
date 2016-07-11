@@ -1,6 +1,5 @@
 ---
-pureftpd_apt_packages:
-  - pure-ftpd
+pureftpd_apt_package: pure-ftpd
 
 pureftpd_users: []
 #  - name: ftpuser

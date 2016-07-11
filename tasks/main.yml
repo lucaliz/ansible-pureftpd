@@ -1,9 +1,8 @@
 ---
 - name: 'Install pureftpd'
   apt:
-    pkg: '{{ item }}'
+    pkg: '{{ pureftpd_apt_package }}'
     state: present
-  with_items: '{{ pureftpd_apt_packages }}'
 
 - name: 'Get all config variables from file system'
   command: ls -1 /etc/pure-ftpd/conf

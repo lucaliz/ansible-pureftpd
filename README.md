@@ -26,6 +26,9 @@ pureftpd_users:
 
 ### Config Variables
 
+Choose which flavour to install:
+`pureftpd_apt_package`: `pure-ftpd`, `pure-ftpd-mysql`, `pure-ftpd-postgresql`, `pure-ftpd-ldap`
+
 Values should be surrounded by quotation marks as otherwise yes becomes True
 
 ```
