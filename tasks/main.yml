@@ -31,7 +31,7 @@
 - name: Check for TLS certificate file
   stat:
     path: /etc/ssl/private/pure-ftpd.pem
-  when: "pureftpd_config.TLS and pureftpd_config.TLS > 0"
+  when: "pureftpd_config.TLS and pureftpd_config.TLS|int() > 0"
   register: _pureftpd_tls_certificate
   tags: test
 
