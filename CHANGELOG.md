@@ -1,6 +1,24 @@
 CHANGELOG
 =========
 
+v1.1.0:
+
+* 200e2a9: Use package name as service name
+* c79391c: Really fix the test
+* fffc6a0: Try to fix the build
+* 4535f5a: The service name is depndent on the package that is installed
+* 71944a9: Make build more verbose
+* 66b9cd7: Update README to match defaults
+* 8ad3f01: Add hint for missing certificate file when TLS was enabled
+* f26765e: And so we should specify them in the test as well
+* e280a0e: uid and gid should be always specified
+* 22057bf: Only (re)create user database if users are defined
+* 07f7657: Config directory is created by installing the package
+* e082e26: Works without adding an FTP user and group
+* 0853047: `pure-ftpd-common` will be installed as dependency anyway
+* f7bfc12: Sort options and only activate those that are activated by default
+* e64fc80: Make it possible to install other pure-ftpd packages
+
 v1.0.1:
 
 * 634cffc: Re-add meta info to make ansible-galaxy command work again
