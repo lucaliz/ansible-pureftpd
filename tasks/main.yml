@@ -54,7 +54,6 @@
 - name: Start pureftpd
   notify: reload pureftpd-users
   service:
-    name: 'pure-ftpd'
+    name: '{{ pureftpd_apt_package }}'
     state: started
     enabled: yes
-
