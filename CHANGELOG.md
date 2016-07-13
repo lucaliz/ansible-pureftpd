@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+v1.2.0:
+
+* 961da11: Fix value omitting
+* d080a9f: Allow to explicitly set UID of the user Update README
+* 588b408: Re-introduce creation of a ftp user and group
+* 19ef9dd: Add ability to define an upload script
+
 v1.1.0:
 
 * 200e2a9: Use package name as service name
