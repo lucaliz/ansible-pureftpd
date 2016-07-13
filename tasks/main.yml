@@ -17,6 +17,12 @@
   when: "pureftpd_config[item] is not defined"
   with_items: '{{ contents.stdout_lines }}'
 
+- name: Include uploadscript setup
+  include: uploadscript.yml
+  when: pureftpd_config.CallUploadScript is defined and
+        pureftpd_config.CallUploadScript == 'yes' and
+        pureftpd_upload_script is defined
+
 - name: 'Write config files'
   notify: restart pureftpd
   template:

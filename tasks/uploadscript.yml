@@ -1,0 +1,9 @@
+---
+- name: Upload default config with uploadscript
+  template:
+    src: etc/default/pure-ftpd-common.j2
+    dest: /etc/default/pure-ftpd-common
+    owner: root
+    group: root
+    mode: 0644
+

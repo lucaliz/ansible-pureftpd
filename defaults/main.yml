@@ -72,3 +72,7 @@ pureftpd_config:
 #  UserRatio:                   '1 10'
 #  VerboseLog:                  'yes'
 
+# Set when the upload script should be used
+#pureftpd_upload_script:
+#pureftpd_upload_script_uid:
+#pureftpd_upload_script_gid:
