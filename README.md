@@ -24,6 +24,13 @@ pureftpd_users:
 
 ```
 
+To allow virtual users, one single user will be created:
+
+* `pureftpd_user`: Name of the ftp user (default 'ftpuser')
+* `pureftpd_user_home`: (optional, e.g. `/home/ftp`)
+* `pureftpd_group`: Name of the ftp user group (default 'ftp')
+
+
 ### Config Variables
 
 Choose which flavour to install:

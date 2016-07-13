@@ -1,6 +1,10 @@
 ---
 pureftpd_apt_package: pure-ftpd
 
+pureftpd_user: ftp
+pureftpd_user_home: /home/ftp
+pureftpd_group: ftp
+
 pureftpd_users: []
 #  - name: ftpuser
 #    password: '$2....40'

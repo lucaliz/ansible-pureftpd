@@ -4,6 +4,23 @@
     pkg: '{{ pureftpd_apt_package }}'
     state: present
 
+- name: Ensure pureftpd_group exists
+  register: _pureftpd_group
+  group:
+    name: '{{ pureftpd_group }}'
+    gid: '{{ pureftpd_group_gid|omit() }}'
+    system: no
+    state: present
+
+- name: Ensure pureftpd_user exists
+  register: _pureftpd_user
+  user:
+    name: '{{ pureftpd_user }}'
+    group: '{{ pureftpd_group }}'
+    home: '{{ pureftpd_user_home|omit() }}'
+    system: no
+    state: present
+
 - name: 'Get all config variables from file system'
   command: ls -1 /etc/pure-ftpd/conf
   register: contents
