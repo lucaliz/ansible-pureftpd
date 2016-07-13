@@ -16,6 +16,7 @@
   register: _pureftpd_user
   user:
     name: '{{ pureftpd_user }}'
+    uid: '{{ pureftpd_user_uid|omit() }}'
     group: '{{ pureftpd_group }}'
     home: '{{ pureftpd_user_home|omit() }}'
     system: no
