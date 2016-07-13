@@ -8,7 +8,7 @@
   register: _pureftpd_group
   group:
     name: '{{ pureftpd_group }}'
-    gid: '{{ pureftpd_group_gid|omit() }}'
+    gid: '{{ pureftpd_group_gid|default(omit) }}'
     system: no
     state: present
 
@@ -16,9 +16,9 @@
   register: _pureftpd_user
   user:
     name: '{{ pureftpd_user }}'
-    uid: '{{ pureftpd_user_uid|omit() }}'
+    uid: '{{ pureftpd_user_uid|default(omit) }}'
     group: '{{ pureftpd_group }}'
-    home: '{{ pureftpd_user_home|omit() }}'
+    home: '{{ pureftpd_user_home|default(omit) }}'
     system: no
     state: present
 
