@@ -1,32 +1,32 @@
 # {{ ansible_managed }}
-{% Configuration for pure-ftpd
+{# Configuration for pure-ftpd
 # (this file is sourced by /bin/sh, edit accordingly)
 
 # STANDALONE_OR_INETD
 # valid values are "standalone" and "inetd".
-# Any change here overrides the setting in debconf.%}
+# Any change here overrides the setting in debconf.i#}
 STANDALONE_OR_INETD=standalone
-{%
+{#
 # VIRTUALCHROOT:
 # whether to use binary with virtualchroot support
 # valid values are "true" or "false"
-# Any change here overrides the setting in debconf.%}
+# Any change here overrides the setting in debconf.#}
 VIRTUALCHROOT=false
-{%
+{#
 # UPLOADSCRIPT: if this is set and the daemon is run in standalone mode,
 # pure-uploadscript will also be run to spawn the program given below
 # for handling uploads. see /usr/share/doc/pure-ftpd/README.gz or
-# pure-uploadscript(8) %}
+# pure-uploadscript(8) #}
 
 {% if pureftpd_upload_script is defined %}
-{%# example: UPLOADSCRIPT=/usr/local/sbin/uploadhandler.pl %}
+{# example: UPLOADSCRIPT=/usr/local/sbin/uploadhandler.pl #}
 UPLOADSCRIPT={{ pureftpd_upload_script }}
 {% else %}
 UPLOADSCRIPT=
 {% endif %}
-{%
+{#
 # if set, pure-uploadscript will spawn running as the
-# given uid and gid %}
+# given uid and gid #}
 {% if pureftpd_upload_script_uid is defined and
       pureftpd_upload_script_gid is defined %}
 UPLOADUID={{ pureftpd_upload_script_uid }}
