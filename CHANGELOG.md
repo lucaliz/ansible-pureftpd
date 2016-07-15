@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+v1.2.1:
+
+* cd7ee41: Fix comment in jinja2 template
+
 v1.2.0:
 
 * 961da11: Fix value omitting
