@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+v1.2.2:
+
+* 3b218c9: Use the right syntax for comments :-/
+* 7d88492: Fix variables for test
+* 51284bc: Add test for using an upload script
+
 v1.2.1:
 
 * cd7ee41: Fix comment in jinja2 template
