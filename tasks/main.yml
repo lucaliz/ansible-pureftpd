@@ -41,7 +41,7 @@
         pureftpd_config.CallUploadScript == 'yes' and
         pureftpd_upload_script is defined
 
-- name: 'Write config files'
+- name: Write config files
   notify: restart pureftpd
   template:
     src: 'config.j2'

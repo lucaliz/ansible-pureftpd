@@ -10,8 +10,16 @@
         uid: 1000
         gid: 1000
     pureftpd_config:
-      - CallUploadScript: 'yes'
-      - pureftpd_upload_script: '/bin/true'
+      CallUploadScript:     'yes'
+      AltLog:               'clf:/var/log/pure-ftpd/transfer.log'
+      FSCharset:            'UTF-8'
+      MinUID:               '1000'
+      NoAnonymous:          'yes'
+      PAMAuthentication:    'yes'
+      PureDB:               /etc/pure-ftpd/pureftpd.pdb
+      TLSCipherSuite:       'ALL:!aNULL:!SSLv3'
+      UnixAuthentication:   'no'
+    pureftpd_upload_script: '/bin/true'
 
   roles:
     - ansible-pureftpd
