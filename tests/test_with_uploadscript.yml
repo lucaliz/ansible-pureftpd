@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  remote_user: root
+
+  vars:
+    pureftpd_users:
+      - name: joe
+        password: '$1$cZIFAH90$256idgiw.eo9RNieuXUr20' # test
+        home: '/home/joe'
+        uid: 1000
+        gid: 1000
+    pureftpd_config:
+      - CallUploadScript: 'yes'
+      - pureftpd_upload_script: '/bin/true'
+
+  roles:
+    - ansible-pureftpd
